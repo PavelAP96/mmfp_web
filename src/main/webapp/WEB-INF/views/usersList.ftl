@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Users List</h1>
+<br>
+<table>
+    <tr>
+       <th>ID</th>
+       <th>NAME</th>
+       <th>EMAIL</th>
+       <th>AGE</th>
+    </tr>
+    <#list users as user>
+        <tr>
+            <td>${user.id}</td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.age}</td>
+        </tr>
+    </#list>
+</table>
+</body>
+</html>
