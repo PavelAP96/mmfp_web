@@ -20,4 +20,22 @@ public class UserDaoImpl implements UserDao {
     public List<User> findAll() {
         return jdbcTemplate.query("SELECT * FROM user", new UserMapper());
     }
+
+    @Override
+    public User getById(int id) {
+        String sql = "SELECT * FROM user WHERE ID=?";
+        return jdbcTemplate.queryForObject(sql, new UserMapper(), id);
+    }
+
+    @Override
+    public void save(User user) {
+        String sql = "UPDATE user SET NAME = ?, EMAIL = ?, AGE = ? WHERE ID = ?";
+        jdbcTemplate.update(sql, user.getName(), user.getEmail(), user.getAge(), user.getId());
+    }
+
+    @Override
+    public void delete(int id) {
+        String sql = "DELETE FROM user WHERE ID = ?";
+        jdbcTemplate.update(sql, id);
+    }
 }

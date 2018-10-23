@@ -15,4 +15,19 @@ public class UserServiceImpl implements UserService {
     public List<User> findAll() {
         return userDao.findAll();
     }
+
+    @Override
+    public void delete(int id) {
+        userDao.delete(id);
+    }
+
+    @Override
+    public void save(User user) {
+        userDao.save(user);
+    }
+
+    @Override
+    public User getById(int id) {
+        return userDao.getById(id);
+    }
 }
