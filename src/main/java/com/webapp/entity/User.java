@@ -2,7 +2,7 @@ package com.webapp.entity;
 
 public class User {
     private int id;
-    private String Name;
+    private String name;
     private String email;
     private int age;
 
@@ -14,7 +14,7 @@ public class User {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getEmail() {
@@ -31,7 +31,7 @@ public class User {
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public void setEmail(String email) {

@@ -23,5 +23,6 @@
         </tr>
     </#list>
 </table>
+<a href="/addUser">New</a>
 </body>
 </html>
