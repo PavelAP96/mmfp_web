@@ -5,7 +5,7 @@
     <title>User Info</title>
 </head>
 <body>
-<h1>Users List</h1>
+<h1>Users Info</h1>
 <br>
 <table>
     <tr>
